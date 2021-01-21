@@ -29,7 +29,7 @@ namespace DegerVeReferansTipler
             // Sonuçlarının farklı olmasının sebebi; değer tip olanlar stack. 
             //değer tiplerde değer atanıyor, referans tiplerde adres atanıyor.
 
-            //
+            
         }
     }
 }
