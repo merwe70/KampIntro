@@ -24,6 +24,10 @@ namespace OOP2
             
 
 
+            //gerçek müşteri-tüzel müşteri
+            //SOLID
+
+
             //Kodlama.io
             TuzelMusteri musteri2 = new TuzelMusteri();
             musteri2.Id = 2;
@@ -35,7 +39,7 @@ namespace OOP2
             Musteri musteri4 = new TuzelMusteri(); // Musteri gerçek ve tüzeli tutabiliyor.
 
 
-            MusteriManager musteriManager = new MusteriManager();
+            MusteriManager musteriManager = new MusteriManager();  //instance oluşturmak
             musteriManager.Ekle(musteri1);
             musteriManager.Ekle(musteri2);
         }

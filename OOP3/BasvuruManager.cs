@@ -8,7 +8,7 @@ namespace OOP3
     {
         //Method injection---- yani burada kullanılacak metodun ne olacağını hangi kredi türü olacağını ve hangi loglayıcı olacağını enjekte ediyoruz 
         //hem veritabanına loglama hem de sms atma için birden fazla logger yolluyoruz onun için liste oluşturuyoruz
-        public void BasvuruYap(IKrediManager krediManager,List<ILoggerService>loggerServices)
+        public void BasvuruYap(IKrediManager krediManager,List<ILoggerService>loggerServices)//bu başvuruyu hangi krediye göre yapmam gerektiğini belirlememiz gerekiyor  
         {
 
 
@@ -16,6 +16,7 @@ namespace OOP3
             //
             //KonutKrediManager konutKrediManager = new KonutKrediManager();
             //konutKrediManager.Hesapla(); //biz böyle yapar isek tüm başvurular konut kredisi üzerinden hesaplanır.
+            //yukardaki gibi yaparsak tüm başvuruyu konut kredisine bağımlı hale getiririz
 
 
             krediManager.Hesapla(); //şu an başvuruyu kredi bağımsız hale getirdik
@@ -30,9 +31,9 @@ namespace OOP3
 
         }
 
-        public void KrediOnBilgilendirmesiYap(List<IKrediManager>krediler) //birden fazla kredinin hesabınıyapmak istiyorsak liste kullanırız tür olarak da IKrediManager istedik 
+        public void KrediOnBilgilendirmesiYap(List<IKrediManager>krediler) //birden fazla kredinin hesabınıyapmak istiyorsak liste kullanırız tür olarak da IKrediManager istedik.------burda ön bilgilendirme birden çok kredinin hesabını yapmak için 
         {
-            foreach (var kredi in krediler)
+            foreach (var kredi in krediler)  //kredilerdeki her bir kredinin bi operasyonunu yap
             {
                 kredi.Hesapla(); //Listedeki her bir kredinin hesabını yap
             }

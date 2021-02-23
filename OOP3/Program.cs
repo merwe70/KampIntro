@@ -26,15 +26,18 @@ namespace OOP3
             List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerService(), new FileLoggerService() };
 
             BasvuruManager basvuruManager = new BasvuruManager();
-            basvuruManager.BasvuruYap(new EsnafKredisiManager(), loggers); //ÖNEMLİ 
+            basvuruManager.BasvuruYap(new EsnafKredisiManager(), loggers); //ÖNEMLİ ------------//yeni bir instance oluşturup sisteme esnafı dahil ettik
+               //interface ler new lenemez
               //  new List<ILoggerService> {new DatabaseLoggerService(), new SmsLoggerService() } ); //ALTERNATİFİ BU   loggers in yaptığını yapıyor bu da 
             //
 
-            List<IKrediManager> krediler = new List<IKrediManager>() {ihtiyacKrediManager,tasitKrediManager };
+            List<IKrediManager> krediler = new List<IKrediManager>() {ihtiyacKrediManager,tasitKrediManager }; //listeden hem ihtiyaç hem de taşıt seçti
 
             //basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+            // SİSTEME YENİ BİR ÖZELLİK EKLENDİĞİNDE MEVCUT KODLAR BOZULMAZ
 
 
+            //İNTERFACE REFERANS TUTUCU
         }
     }
 }

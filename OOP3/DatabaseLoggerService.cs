@@ -15,4 +15,6 @@ namespace OOP3
             Console.WriteLine("Veritabanına loglandı");
         }
     }
-  }
+
+    
+}

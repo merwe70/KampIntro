@@ -8,7 +8,7 @@ namespace OOP3
     {
         public void Log()
         {
-            Console.WriteLine("Sms gönderildi");
+            Console.WriteLine("Sms yollandı");
         }
     }
 }
